@@ -35,6 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 12.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop', '~> 0.80.1'
-  spec.add_development_dependency 'rubocop-rake', '~> 0.5.1' 
+  spec.add_development_dependency 'rubocop-rake', '~> 0.5.1'
+  spec.add_development_dependency 'rubocop-sorbet', '~> 0.3.7'
   spec.add_development_dependency 'sorbet', '~> 0.5.5460'
 end
