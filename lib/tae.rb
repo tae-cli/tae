@@ -1,4 +1,6 @@
-require "tae/version"
+# frozen_string_literal: true
+
+require 'tae/version'
 
 module Tae
   class Error < StandardError; end
