@@ -29,6 +29,6 @@ namespace :docs do
   task :all => [:build, 'yard:junk', :verify]
 end
 desc 'Generate and verify the docs'
-task :docs => 'docs:all'
+task docs: 'docs:all'
 
-task default: :spec
+task default: [:spec, 'docs:build', 'docs:yard:junk', 'docs:verify']
