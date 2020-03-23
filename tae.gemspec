@@ -29,10 +29,12 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   # runtime deps
+  spec.add_runtime_dependency 'sorbet-runtime', '~> 0.5.5460'
 
   # development deps
   spec.add_development_dependency 'rake', '~> 12.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop', '~> 0.80.1'
-  spec.add_development_dependency 'rubocop-rake', '~> 0.5.1'
+  spec.add_development_dependency 'rubocop-rake', '~> 0.5.1' 
+  spec.add_development_dependency 'sorbet', '~> 0.5.5460'
 end
