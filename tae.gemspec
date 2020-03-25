@@ -40,6 +40,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'simplecov', '~> 0.18.5'
   spec.add_development_dependency 'sorbet', '~> 0.5.5460'
   spec.add_development_dependency 'yard', '~> 0.9.24'
-  spec.add_development_dependency 'yardstick', '~> 0.9.9'
   spec.add_development_dependency 'yard-junk', '~> 0.0.7'
+  spec.add_development_dependency 'yardstick', '~> 0.9.9'
 end
