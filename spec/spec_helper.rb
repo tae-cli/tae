@@ -2,7 +2,15 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
+require 'simplecov'
+
 require 'tae'
+
+SimpleCov.start do
+  enable_coverage :branch
+  command_name ENV['TEST_SUITE']
+  minimum_coverage ENV['MINIMUM_COVERAGE'].to_i
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
