@@ -645,6 +645,8 @@ module RSpec::Core::HashImitatable
   def reject(*args, &block); end
   def replace(*args, &block); end
   def reverse_each(*args, &block); end
+  def reverse_merge!(*args, &block); end
+  def reverse_merge(*args, &block); end
   def select!(*args, &block); end
   def select(*args, &block); end
   def self.included(klass); end
@@ -658,7 +660,11 @@ module RSpec::Core::HashImitatable
   def sort(*args, &block); end
   def sort_by(*args, &block); end
   def store(*args, &block); end
+  def stringify_keys!(*args, &block); end
+  def stringify_keys(*args, &block); end
   def sum(*args, &block); end
+  def symbolize_keys!(*args, &block); end
+  def symbolize_keys(*args, &block); end
   def take(*args, &block); end
   def take_while(*args, &block); end
   def to_a(*args, &block); end
@@ -1630,6 +1636,16 @@ class RSpec::Core::Time
   def self.now; end
 end
 class Module
+  def context(*a, &b); end
+  def describe(*a, &b); end
+  def example_group(*a, &b); end
+  def fcontext(*a, &b); end
+  def fdescribe(*a, &b); end
+  def shared_context(name, *args, &block); end
+  def shared_examples(name, *args, &block); end
+  def shared_examples_for(name, *args, &block); end
+  def xcontext(*a, &b); end
+  def xdescribe(*a, &b); end
 end
 module RSpec::Core::SharedContext
   def __shared_context_recordings; end
@@ -1858,15 +1874,4 @@ class RSpec::Core::Formatters::FailureListFormatter < RSpec::Core::Formatters::B
   def dump_profile(_profile); end
   def example_failed(failure); end
   def message(_message); end
-end
-module RSpec::Core::MockingAdapters
-end
-module RSpec::Core::MockingAdapters::RSpec
-  def self.configuration; end
-  def self.framework_name; end
-  def setup_mocks_for_rspec; end
-  def teardown_mocks_for_rspec; end
-  def verify_mocks_for_rspec; end
-  include RSpec::Mocks::ExampleMethods
-  include RSpec::Mocks::ExampleMethods::ExpectHost
 end

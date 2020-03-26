@@ -426,6 +426,7 @@ module RuboCop::AST::CollectionNode
   def each_with_object(*args, &block); end
   def empty?(*args, &block); end
   def entries(*args, &block); end
+  def extract_options!(*args, &block); end
   def fetch(*args, &block); end
   def fill(*args, &block); end
   def find(*args, &block); end

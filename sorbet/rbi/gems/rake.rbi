@@ -223,6 +223,7 @@ class Rake::FileList
   def existing!; end
   def existing; end
   def ext(newext = nil); end
+  def extract_options!(*args, &block); end
   def fetch(*args, &block); end
   def fill(*args, &block); end
   def find(*args, &block); end

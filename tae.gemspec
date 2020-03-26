@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
 
   # runtime deps
   spec.add_runtime_dependency 'sorbet-runtime', '~> 0.5.5460'
+  spec.add_runtime_dependency 'thor', '~> 1.0.1'
 
   # development deps
   spec.add_development_dependency 'rake', '~> 12.0'
