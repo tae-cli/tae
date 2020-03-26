@@ -40,8 +40,8 @@ jobs:
     - name: Documentation
       run: rake docs:build
 
-    - name: Documentation verify
-      run: rake docs:verify
+    - name: Documentation report
+      run: rake docs:report
     
     - name: Documentation lint
       run: rake docs:yard:junk
