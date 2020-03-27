@@ -59,7 +59,6 @@ namespace :docs do
   yardstick_config = YAML.load_file('.yardstick.yml')
   Yardstick::Rake::Measurement.new(:verify, yardstick_config) do |t|
     t.output = report_file
-    puts 'Verifying documentation with Yardstick'
   end
 
   desc 'Run Yardstick then print the output'

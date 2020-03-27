@@ -30,7 +30,9 @@ Sorbet/StrictSigil:
 Sorbet:
   Exclude:
     - 'bin/**/*'
+    - 'exe/**/*'
     - 'spec/**/*'
+    - 'lib/tae/main.rb' # Thor's 'desc' method comes up as untyped
     - '*.gemspec'
     - 'Rakefile'
     - 'Gemfile'

@@ -1,8 +1,11 @@
 # typed: false
 # frozen_string_literal: true
 
-RSpec.describe Tae do
-  it 'has a version number' do
-    expect(Tae::VERSION).not_to be nil
+require 'spec_helper'
+
+RSpec.describe 'tae version', type: :aruba do
+  it 'Prints a version number' do
+    run_command('tae version')
+    expect(last_command_started).to have_output(/\d+\.\d+\.\d+/)
   end
 end

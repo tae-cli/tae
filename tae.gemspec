@@ -17,7 +17,6 @@ Gem::Specification.new do |spec|
   spec.metadata['source_code_uri'] = 'https://github.com/tae-cli/tae'
   spec.metadata['changelog_uri'] = 'https://github.com/tae-cli/tae/blob/master/CHANGELOG.md'
 
-  # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files that have been added into git.
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject do |f|
@@ -33,6 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'thor', '~> 1.0.1'
 
   # development deps
+  spec.add_development_dependency 'aruba', '~> 1.0'
   spec.add_development_dependency 'rake', '~> 12.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop', '~> 0.80.1'

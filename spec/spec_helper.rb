@@ -1,6 +1,7 @@
 # typed: strict
 # frozen_string_literal: true
 
+require 'aruba/rspec'
 require 'bundler/setup'
 require 'simplecov'
 
