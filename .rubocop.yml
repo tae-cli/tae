@@ -15,10 +15,6 @@ Style/HashTransformKeys:
 Style/HashTransformValues:
   Enabled: true
 
-# Sorbet doesn't support class instance variables  
-Style/ClassVars:
-    Enabled: false
-
 # Require a sorbet sigil and for it to be at least 'strong'.
 # Autocorrect doesn't play nice if more than one of these is 
 # active.
@@ -30,17 +26,18 @@ Sorbet/FalseSigil:
   Enabled: false
 Sorbet/TrueSigil: 
   Enabled: false
-Sorbet/StrongSigil:
-  Enabled: true
 Sorbet/StrictSigil:
+  Enabled: true
+Sorbet/StrongSigil:
   Enabled: false
 
 # Exclude files not part of the gem source, and the /bin files
 # which need to start with the ruby shebang
 Sorbet:
   Exclude:
-    - 'lib/tae/main.rb' # Thor's 'desc' method comes up as untyped
     - '*.gemspec'
     - 'Rakefile'
     - 'Gemfile'
+      # interactions with untyped gems
+    - 'lib/tae/main.rb' 
 
