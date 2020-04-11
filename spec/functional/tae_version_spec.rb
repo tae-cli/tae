@@ -4,7 +4,7 @@
 require 'spec_helper'
 
 RSpec.describe 'tae version', type: :aruba do
-  it 'Prints a version number' do
+  xit 'Prints a version number' do
     run_command('tae version')
     expect(last_command_started).to have_output(/\d+\.\d+\.\d+/)
   end
