@@ -1,6 +1,7 @@
 # typed: strong
 # frozen_string_literal: true
 
+require 'tae/command'
 require 'tae/main'
 require 'tae/version'
 

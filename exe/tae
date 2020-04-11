@@ -3,4 +3,4 @@
 
 require 'tae'
 
-Tae::Main.start(ARGV)
+Tae::Main.start

@@ -330,6 +330,7 @@ class RSpec::Expectations::Configuration
   def add_should_and_should_not_to(*modules); end
   def backtrace_formatter; end
   def backtrace_formatter=(arg0); end
+  def color=(arg0); end
   def color?; end
   def false_positives_handler; end
   def include_chain_clauses_in_custom_matcher_descriptions=(arg0); end

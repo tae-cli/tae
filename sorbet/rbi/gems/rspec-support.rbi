@@ -95,43 +95,6 @@ module RSpec::Support::Warnings
   def warn_with(message, options = nil); end
   def warning(text, options = nil); end
 end
-class RSpec::Support::EncodedString
-  def <<(string); end
-  def ==(*args, &block); end
-  def detect_source_encoding(string); end
-  def empty?(*args, &block); end
-  def encoding(*args, &block); end
-  def eql?(*args, &block); end
-  def initialize(string, encoding = nil); end
-  def lines(*args, &block); end
-  def matching_encoding(string); end
-  def remove_invalid_bytes(string); end
-  def self.pick_encoding(source_a, source_b); end
-  def source_encoding; end
-  def split(regex_or_string); end
-  def to_s; end
-  def to_str; end
-end
-class RSpec::Support::ReentrantMutex
-  def enter; end
-  def exit; end
-  def initialize; end
-  def synchronize; end
-end
-class RSpec::Support::DirectoryMaker
-  def self.directory_exists?(dirname); end
-  def self.generate_path(stack, part); end
-  def self.generate_stack(path); end
-  def self.mkdir_p(path); end
-end
-module RSpec::Support::RecursiveConstMethods
-  def const_defined_on?(mod, const_name); end
-  def constants_defined_on(mod); end
-  def get_const_defined_on(mod, const_name); end
-  def normalize_const_name(const_name); end
-  def recursive_const_defined?(const_name); end
-  def recursive_const_get(const_name); end
-end
 class RSpec::Support::ObjectFormatter
   def format(object); end
   def initialize(max_formatted_output_length = nil); end
@@ -206,6 +169,43 @@ module RSpec::Support::FuzzyMatcher
   def self.arrays_match?(expected_list, actual_list); end
   def self.hashes_match?(expected_hash, actual_hash); end
   def self.values_match?(expected, actual); end
+end
+class RSpec::Support::EncodedString
+  def <<(string); end
+  def ==(*args, &block); end
+  def detect_source_encoding(string); end
+  def empty?(*args, &block); end
+  def encoding(*args, &block); end
+  def eql?(*args, &block); end
+  def initialize(string, encoding = nil); end
+  def lines(*args, &block); end
+  def matching_encoding(string); end
+  def remove_invalid_bytes(string); end
+  def self.pick_encoding(source_a, source_b); end
+  def source_encoding; end
+  def split(regex_or_string); end
+  def to_s; end
+  def to_str; end
+end
+class RSpec::Support::ReentrantMutex
+  def enter; end
+  def exit; end
+  def initialize; end
+  def synchronize; end
+end
+class RSpec::Support::DirectoryMaker
+  def self.directory_exists?(dirname); end
+  def self.generate_path(stack, part); end
+  def self.generate_stack(path); end
+  def self.mkdir_p(path); end
+end
+module RSpec::Support::RecursiveConstMethods
+  def const_defined_on?(mod, const_name); end
+  def constants_defined_on(mod); end
+  def get_const_defined_on(mod, const_name); end
+  def normalize_const_name(const_name); end
+  def recursive_const_defined?(const_name); end
+  def recursive_const_get(const_name); end
 end
 class RSpec::Support::MethodSignature
   def arbitrary_kw_args?; end
